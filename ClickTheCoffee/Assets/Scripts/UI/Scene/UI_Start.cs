@@ -55,20 +55,18 @@ public class UI_Start : UI_Scene
     public void Play()
     {
         Managers.Sound.Play("Effect/ring");
-        // 데이터 불러오딩
+        // Data Load
         Managers.Data.LoadPlayerData();
 
-        // 데이터 적용하기 (재료 / 음료해금 / 구매)
+        // Data Setting
         for(int i = 0; i < Managers.Data.Playerdata.unlockStuffList.Count; i++)
         {
-            // 재료 이름 찾아서 있으면 그놈 언락
             string stuffName = Managers.Data.Playerdata.unlockStuffList[i];
             if (Managers.Data.StuffDict.TryGetValue(stuffName, out Data.Stuff stuff))
                 stuff.isLocked = false;
             else
                 Debug.Log($"해당 재료를 찾을 수 없습니다 : {stuffName}");            
         }
-        
 
         sceneFader.FadeTo("Game");
     }

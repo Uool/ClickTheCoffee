@@ -80,6 +80,14 @@ public class UI_Counter : UI_Scene
         GetImage((int)Images.DayImage).sprite = Managers.Resource.Load<Sprite>("Art/ButtonIcon/Morning");
         GetText((int)Texts.DayText).text = $"{Managers.Data.Playerdata.day}일";
         RenewText();
+
+
+        // Prefab Load
+        if (null == _ui_Kitchen)
+        {
+            _ui_Kitchen = Managers.UI.ShowPopupUI<UI_Kitchen>();
+            _ui_Kitchen.gameObject.SetActive(false);
+        }
     }
 
     void Update()
@@ -95,17 +103,18 @@ public class UI_Counter : UI_Scene
     void ClickOptionButton()
     {
         UI_Option ui_Option = Managers.UI.ShowPopupUI<UI_Option>();
-        ui_Option.sceneFader = gameObject.GetComponent<SceneFader>();
+
+        // Pause
         Time.timeScale = 0f;
     }
 
     void ClickKitchenButton()
     {
-        if (null == _ui_Kitchen)
-            _ui_Kitchen = Managers.UI.ShowPopupUI<UI_Kitchen>();
-        else
+        if (null != _ui_Kitchen)
+        { 
             _ui_Kitchen.gameObject.SetActive(true);
-        _ui_Kitchen.SetCounter(this);
+            _ui_Kitchen.SetCounter(this);
+        }
     }
     public void SettingDrink(Data.Recipe recipe, Define.Level level)
     {
@@ -119,8 +128,6 @@ public class UI_Counter : UI_Scene
         _level = level;
         _drinkButton.gameObject.SetActive(true);
         GetImage((int)Images.DrinkButton).sprite = Managers.Resource.Load<Sprite>($"Art/Cafe_Img/{_currentDrink.engName}");
-        // 테이블 위로 스윽 올라오는 애니메이션 삽입
-        //_drinkButton.gameObject.GetComponent<Animator>().Play("");
         _salesCost = _currentDrink.cost;
     }
 
@@ -131,7 +138,7 @@ public class UI_Counter : UI_Scene
         if (null == customer)
             return;
 
-        // 비교 (손님이 원하는것과 같은건가?)
+        // Order Check
         if (customer.recipe.drinkID == _currentDrink.drinkID)
         {
             customer.ReviewText(_level);
@@ -174,7 +181,6 @@ public class UI_Counter : UI_Scene
 
     void Timer()
     {
-        // 타이머
         _minute += Time.deltaTime * 2f;
         if (60f <= _minute)
         {

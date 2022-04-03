@@ -173,7 +173,7 @@ public class UI_Kitchen : UI_Popup
             return;
 
         int stuffCount = 0;
-        // 얘 몇번째 재료냐?
+  
         foreach (Stuff stuff in stuffList)
         {
             if (stuff != currentStuff)
@@ -182,7 +182,7 @@ public class UI_Kitchen : UI_Popup
                 break;
         }
 
-        // 이 재료는 기존에 추가된 적이 있습니까?
+        // 기존에 추가 된 재료가 있는지 체크
         if (stuffList.Contains(currentStuff))
         {
             // 비교할 카운트
@@ -204,7 +204,7 @@ public class UI_Kitchen : UI_Popup
             }
             _totalAmount += 0.1f;
         }
-        else  // 단 한번도 추가된 적이 없다고?
+        else
         {
             FillImage fillObj = Managers.Resource.Instantiate("UI/FillImage", Get<Transform>((int)Transforms.FillCup)).GetOrAddComponent<FillImage>();
             fillObj.currentAmount += 0.1f;
@@ -223,7 +223,7 @@ public class UI_Kitchen : UI_Popup
             fillObjDic.Add(currentStuff, fillObj);
         }
 
-        // Text 추가 (누를때마다 아예 갱신을 하자)
+        // Text 추가
         _stuffText.text = "사용재료 :";
         for (int i = 0; i < stuffList.Count; i++)
         {
@@ -238,35 +238,28 @@ public class UI_Kitchen : UI_Popup
             return;
 
         int totalStuffID = 0;
-        // 완성된 음료를 분석 후, 새로운 팝업창에 전달을 해줘야 함.
-        // 지금 재료가 뭐 나왔냐?
+
         foreach(Stuff stuff in stuffList)
         {
             float stuffAmount = 0f;
-            // 재료의 아이디를 다 더해줍시다
             totalStuffID += stuff.stuffID;
-            // 재료의 양을 확인
             stuffAmount = fillObjDic[stuff].currentAmount;
 
             // 현재 재료와 양을 기록해둔다.
             checkDic.Add(stuff.stuffName, stuffAmount);
         }
 
-        // 비교
-        // 레시피를 비교해서 뒤져봐
+        // 레시피와 비교
         if (Managers.Data.RecipeDict.TryGetValue(totalStuffID, out Data.Recipe recipe))
         {
             float errorRate = 0f;
 
-            // 얼마나 비율이 잘 맞는지? 
             for (int i = 0; i < checkDic.Count; i++)
             {
-                // 재료 이름 뽑아옴
                 string stuffName = recipe.korStuffList[i];
                 float first = checkDic[stuffName];
                 float second = recipe.amountList[i];
 
-                // 이거 해결법 모르겠다
                 if (0.98f <= first)
                     first = 1f;
                 if (0.98f <= second)
@@ -281,24 +274,18 @@ public class UI_Kitchen : UI_Popup
             // 오차가 없이 완벽하다?
             if (errorRate <= 0.09f)
             {
-                Debug.Log("오차가 없이 완벽한 음료입니다!");
                 complete.DefaultSetting(recipe, Define.Level.Perfect);
                 // 이 경우 플레이어 데이터에 새로운 언락 음료를 저장해놔야 한다.
                 Managers.Data.Playerdata.unlockDrinkList.Add(recipe.engName);
             }
             else if (0.1f <= errorRate && errorRate < 0.4f)
             {
-                Debug.Log("양 조절이 미묘하게 실패한 듯 하군요?");
                 complete.DefaultSetting(recipe, Define.Level.Good);
             }
             else
             {
-                Debug.Log("양 조절이 실패한 듯 하군요?");
                 complete.DefaultSetting(recipe, Define.Level.NotBad);
             }
-
-            // 이 음료는 무슨 음료인지 뽑아내봐
-            Debug.Log($"이 음료는 {recipe.korName} 입니다.");
         }
         else
         {

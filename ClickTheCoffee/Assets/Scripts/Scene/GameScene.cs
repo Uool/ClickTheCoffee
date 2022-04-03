@@ -11,8 +11,8 @@ public class GameScene : BaseScene
 
         Managers.UI.ShowSceneUI<UI_Counter>();
 
-        // 배경음악 틀기
-        //Managers.Sound.Play("Bgm/Meeka - Steve Adams", Define.Sound.Bgm);
+        // Play Bgm
+        Managers.Sound.Play("Bgm/Sunny Days - Anno Domini Beats", Define.Sound.Bgm);
     }
 
     public override void Clear()
