@@ -14,12 +14,17 @@ public class UI_Kitchen : UI_Popup
         FruitButton,
         EtcButton,
         FillButton,
+        CancelButton,
         CompleteButton,
+        GoCounterButton,
+        MakeListButton,
     }
     enum GameObjects
     {
         MainPanel,
         LiquidPanel,
+        FruitPanel,
+        EtcPanel,
     }
     enum Transforms
     {
@@ -28,26 +33,41 @@ public class UI_Kitchen : UI_Popup
 
     enum Stuffs
     {
-        Coffee,
-        Choco,
-        Water,
-        Milk,
+        Coffee, Choco, GreenTeaPowder, IceTeaPowder,
+        Water, Milk, Vanilla_S, Choco_S, Honey_S, Condensed_Milk_S, Caramel_S, Ice, SparklingWater,
+        Strawberry, Lemon, Grape, Orange,
+        Sugar, Ginger, Cinnamomum, SweetPotato, IceCream, Oreo
+    }
+
+    enum Texts
+    {
+        StuffText,
     }
 
     // Check Stuff
-    Stuff currentStuff;     // 선택된 재료
+    [HideInInspector] public Stuff currentStuff;     // 선택된 재료
     List<Stuff> stuffList = new List<Stuff>();      // 한 음료에 들어간 재료의 리스트
     Dictionary<Stuff, FillImage> fillObjDic = new Dictionary<Stuff, FillImage>();   // 재료가 얼마나 들어갔는지 체크하기 위한 딕셔너리
-
     Dictionary<string, float> checkDic = new Dictionary<string, float>();   // 재료 이름과, 양을 담아둬서 비교하기 위한 딕셔너리
-    float totalAmount;
+
+    // MakeList (한번 만들어내면 그 이후에는 더 만들필요가 없지)
+    UI_MakeList _ui_MakeList;
+
+    UI_Counter _ui_Counter;
+
+    float _totalAmount;
+    Text _stuffText;
+    int _maxCount = Enum.GetValues(typeof(Stuffs)).Length;
+    bool isStart = false;
+
+    public void SetCounter(UI_Counter counter)
+    {
+        _ui_Counter = counter;
+    }
 
     protected void Start()
     {
         Init();
-
-        // Start Panel
-        ClickSelectButton((int)GameObjects.MainPanel);
     }
 
     public override void Init()
@@ -59,11 +79,15 @@ public class UI_Kitchen : UI_Popup
         Bind<Button>(typeof(Buttons));
         Bind<GameObject>(typeof(GameObjects));
         Bind<Transform>(typeof(Transforms));
+        Bind<Text>(typeof(Texts));
 
         // Stuff List
         Bind<Stuff>(typeof(Stuffs));
 
         BindingEvent();
+
+        _stuffText = GetText((int)Texts.StuffText);
+        _stuffText.text = "사용재료 :";
     }
 
     void BindingEvent()
@@ -71,20 +95,32 @@ public class UI_Kitchen : UI_Popup
         // Select Button
         BindEvent(GetButton((int)Buttons.MainButton).gameObject, (PointerEventData data) => { ClickSelectButton((int)GameObjects.MainPanel); });
         BindEvent(GetButton((int)Buttons.LiquidButton).gameObject, (PointerEventData data) => { ClickSelectButton((int)GameObjects.LiquidPanel); });
-        //BindEvent(GetButton((int)Buttons.FruitButton).gameObject, (PointerEventData data) => { ClickSelectButton((int)GameObjects.JuiceMenu); });
-        //BindEvent(GetButton((int)Buttons.EtcButton).gameObject, (PointerEventData data) => { ClickSelectButton((int)GameObjects.UpgradeMenu); });
+        BindEvent(GetButton((int)Buttons.FruitButton).gameObject, (PointerEventData data) => { ClickSelectButton((int)GameObjects.FruitPanel); });
+        BindEvent(GetButton((int)Buttons.EtcButton).gameObject, (PointerEventData data) => { ClickSelectButton((int)GameObjects.EtcPanel); });
 
         // Stuff Button
-        BindEvent(Get<Stuff>((int)Stuffs.Coffee).iconButton.gameObject, (PointerEventData data) => { ClickStuffIcon((int)Stuffs.Coffee); });
-        BindEvent(Get<Stuff>((int)Stuffs.Choco).iconButton.gameObject, (PointerEventData data) => { ClickStuffIcon((int)Stuffs.Choco); });
-        BindEvent(Get<Stuff>((int)Stuffs.Water).iconButton.gameObject, (PointerEventData data) => { ClickStuffIcon((int)Stuffs.Water); });
-        BindEvent(Get<Stuff>((int)Stuffs.Milk).iconButton.gameObject, (PointerEventData data) => { ClickStuffIcon((int)Stuffs.Milk); });
+        for (int i = 0; i < _maxCount; i++)
+        {
+            int temp = i;
+            BindEvent(Get<Stuff>(temp).iconButton.gameObject, (PointerEventData data) => { ClickStuffIcon(temp); });
+        }
 
-        // FillButton
+        // Button
         BindEvent(GetButton((int)Buttons.FillButton).gameObject, (PointerEventData data) => { ClickFillButton(); });
-
-        // CompleteButton
+        BindEvent(GetButton((int)Buttons.CancelButton).gameObject, (PointerEventData data) => { ResetAll(); });
         BindEvent(GetButton((int)Buttons.CompleteButton).gameObject, (PointerEventData data) => { ClickCompleteButton(); });
+        BindEvent(GetButton((int)Buttons.GoCounterButton).gameObject, (PointerEventData data) => { ClickGoCounterButton(); });
+        BindEvent(GetButton((int)Buttons.MakeListButton).gameObject, (PointerEventData data) => { ClickMakeListButton(); });
+    }
+
+    protected void Update()
+    {
+        if (!isStart)
+        {
+            // Start Panel
+            ClickSelectButton((int)GameObjects.MainPanel);
+            isStart = true;
+        }
     }
 
     void ClickSelectButton(int idx)
@@ -103,36 +139,37 @@ public class UI_Kitchen : UI_Popup
 
     void ClickStuffIcon(int idx)
     {
-        Array array = Enum.GetValues(typeof(Stuffs));
-
         // 클릭된 놈 정보 저장(이름),잠금여부, 체크표시(활성,비활성)
-        for (int i = 0; i < array.Length; i++)
+        for (int i = 0; i < _maxCount; i++)
         {
-            if (i == idx && !Get<Stuff>(idx).isLocked)
+            if (i == idx && false == Get<Stuff>(idx).isLocked)
             {
                 currentStuff = Get<Stuff>(idx);
                 // CheckButton Active
                 Get<Stuff>(idx).iconCheck.SetActive(true);
             }
-            else if(i != idx && !Get<Stuff>(idx).isLocked)
+            else if(i != idx && false == Get<Stuff>(idx).isLocked)
             {
                 // CheckButton InActive
                 Get<Stuff>(i).iconCheck.SetActive(false);
             }
-            else if (Get<Stuff>(idx).isLocked)
+            else if (true == Get<Stuff>(idx).isLocked)
             {
                 // 해금 팝업창
+                UI_Unlock ui_Unlock = Managers.UI.ShowPopupUI<UI_Unlock>();
+                ui_Unlock.DefaultSetting(Get<Stuff>(idx));
+                break;
             }
         }
     }
 
-    void ClickFillButton()
+    public void ClickFillButton()
     {
         // 선택된 것이 없으면 return
         if (null == currentStuff)
             return;
 
-        if (0.98f < totalAmount)
+        if (0.98f < _totalAmount)
             return;
 
         int stuffCount = 0;
@@ -165,7 +202,7 @@ public class UI_Kitchen : UI_Popup
                 // 점검 끝나면 카운트 올려준다.
                 count++;
             }
-            totalAmount += 0.1f;
+            _totalAmount += 0.1f;
         }
         else  // 단 한번도 추가된 적이 없다고?
         {
@@ -175,22 +212,32 @@ public class UI_Kitchen : UI_Popup
 
             if (stuffList.Count > 0)
             {
-                fillObj.TotalFillStuff(totalAmount);
+                fillObj.TotalFillStuff(_totalAmount);
                 fillObj.transform.SetAsFirstSibling();
             }
             else
                 fillObj.CurrentFillStuff();
 
-            totalAmount += 0.1f;
+            _totalAmount += 0.1f;
             stuffList.Add(currentStuff);    // 재료 리스트에 추가
             fillObjDic.Add(currentStuff, fillObj);
+        }
+
+        // Text 추가 (누를때마다 아예 갱신을 하자)
+        _stuffText.text = "사용재료 :";
+        for (int i = 0; i < stuffList.Count; i++)
+        {
+            _stuffText.text += $"\n{stuffList[i].stuffName} {(fillObjDic[stuffList[i]].currentAmount * 100f)}%";
         }
     }
 
     void ClickCompleteButton()
     {
+        // 음료를 다 만들지 못하면 안됌
+        if (0.98f > _totalAmount)
+            return;
+
         int totalStuffID = 0;
-        
         // 완성된 음료를 분석 후, 새로운 팝업창에 전달을 해줘야 함.
         // 지금 재료가 뭐 나왔냐?
         foreach(Stuff stuff in stuffList)
@@ -215,7 +262,7 @@ public class UI_Kitchen : UI_Popup
             for (int i = 0; i < checkDic.Count; i++)
             {
                 // 재료 이름 뽑아옴
-                string stuffName = recipe.stuffList[i];
+                string stuffName = recipe.korStuffList[i];
                 float first = checkDic[stuffName];
                 float second = recipe.amountList[i];
 
@@ -229,12 +276,15 @@ public class UI_Kitchen : UI_Popup
             }
 
             UI_Complete complete = Managers.UI.ShowPopupUI<UI_Complete>();
+            complete.SetUI(_ui_Counter, this);
             
             // 오차가 없이 완벽하다?
             if (errorRate <= 0.09f)
             {
                 Debug.Log("오차가 없이 완벽한 음료입니다!");
                 complete.DefaultSetting(recipe, Define.Level.Perfect);
+                // 이 경우 플레이어 데이터에 새로운 언락 음료를 저장해놔야 한다.
+                Managers.Data.Playerdata.unlockDrinkList.Add(recipe.engName);
             }
             else if (0.1f <= errorRate && errorRate < 0.4f)
             {
@@ -258,15 +308,47 @@ public class UI_Kitchen : UI_Popup
         ResetAll();
     }
 
+    void ClickGoCounterButton()
+    {
+        gameObject.SetActive(false);
+    }
+
+    void ClickMakeListButton()
+    {
+        if (null == _ui_MakeList)
+        {
+            _ui_MakeList = Managers.UI.ShowPopupUI<UI_MakeList>();
+            _ui_MakeList.uI_Kitchen = this;
+        }
+        else
+            _ui_MakeList.gameObject.SetActive(true);
+    }
+
     void ResetAll()
     {
         // 재료 삭제
         foreach(Stuff stuff in stuffList)
         {
+            // 오브젝트 삭제
+            Managers.Resource.Destroy(fillObjDic[stuff].gameObject);
             fillObjDic.Remove(stuff);
             checkDic.Remove(stuff.stuffName);
         }
         // 재료 리스트 삭제
         stuffList.RemoveRange(0, stuffList.Count);
+
+        // 텍스트 정리
+        _stuffText.text = "사용재료 :";
+        _totalAmount = 0f;
+    }
+
+    public Stuff GetStuff(string stuffName)
+    {
+        Stuff stuff;
+
+        Stuffs enumStuff = (Stuffs)Enum.Parse(typeof(Stuffs), stuffName);
+        stuff = Get<Stuff>((int)enumStuff);
+
+        return stuff;
     }
 }

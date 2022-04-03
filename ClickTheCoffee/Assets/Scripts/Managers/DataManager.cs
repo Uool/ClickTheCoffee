@@ -13,12 +13,26 @@ public class DataManager
     public Dictionary<int, Data.Recipe> RecipeDict { get; private set; } = new Dictionary<int, Data.Recipe>();
     public Data.PlayerStat Playerdata = new Data.PlayerStat();
 
+    // Currently available Making Recipe
+    public List<Data.Recipe> availableRecipe = new List<Data.Recipe>();
+    public List<string> unlockStuffList = new List<string>();
+
     public void Init()
     {
         StuffDict = LoadJson<Data.StuffData, string, Data.Stuff>("StuffData").MakeDict();
         RecipeDict = LoadJson<Data.RecipeData, int, Data.Recipe>("RecipeData").MakeDict();
+
+        // Player Stuff data load
+        foreach(var pair in StuffDict)
+        {
+            if (!pair.Value.isLocked)
+                Playerdata.unlockStuffList.Add(pair.Value.engName);
+        }
+        
+        RenewRecipe();
     }
 
+    #region PlayerData
     Loader LoadJson<Loader, Key, Value>(string path) where Loader : ILoader<Key, Value>
     {
         TextAsset textAsset = Managers.Resource.Load<TextAsset>($"Data/{path}");
@@ -84,4 +98,33 @@ public class DataManager
 
         return false;
     }
+    #endregion
+
+    // Renew available Recipe
+    public void RenewRecipe()
+    {
+        if (unlockStuffList.Count > 0)
+        {
+            unlockStuffList.RemoveRange(0, unlockStuffList.Count);
+            availableRecipe.RemoveRange(0, availableRecipe.Count);
+        }
+
+        foreach(string stuffName in Playerdata.unlockStuffList)
+            unlockStuffList.Add(stuffName);
+
+        foreach (var recipe in RecipeDict)
+        {
+            int correct = 0;
+            for (int i = 0; i < recipe.Value.korStuffList.Count; i++)
+            {
+                for (int j = 0; j < Playerdata.unlockStuffList.Count; j++)
+                {
+                    if (unlockStuffList[j] == recipe.Value.engStuffList[i])
+                        correct++;
+                }
+            }
+            if (recipe.Value.engStuffList.Count == correct)
+                availableRecipe.Add(recipe.Value);
+        }
+    }    
 }

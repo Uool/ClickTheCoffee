@@ -20,7 +20,7 @@ public abstract class UI_Base : MonoBehaviour
     {
         string[] names = Enum.GetNames(type);
 
-        UnityEngine.Object[] objects = new UnityEngine.Object[name.Length];
+        UnityEngine.Object[] objects = new UnityEngine.Object[names.Length];
         // 컴포넌트의 타입, 그 타입 들고있는 놈들
         _objects.Add(typeof(T), objects);
 

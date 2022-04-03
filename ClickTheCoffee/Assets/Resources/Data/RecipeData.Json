@@ -3,20 +3,244 @@
 		{
 			"engName": "Espresso",
 			"korName": "에스프레소",
-			"stuffList": [ "커피" ],
+			"korStuffList": [ "커피" ],
+			"engStuffList": ["Coffee"],
 			"amountList": [ "1" ],
 			"drinkID": 1,
 			"info": "도전하고 싶은 자의 음료.",
-			"cost": 300
+			"cost": 100,
+			"unlockCost": 1000
 		},
 		{
 			"engName": "Americano",
 			"korName": "아메리카노",
-			"stuffList": [ "커피","물" ],
-			"amountList": [ "0.3","0.7" ],
-			"drinkID": 5,
-			"info": "현대인의 필수 물약!",
-			"cost": 350
+			"korStuffList": [ "커피", "물" ],
+			"engStuffList": [ "Coffee", "Water" ],
+			"amountList": [ "0.2", "0.8" ],
+			"drinkID": 4,
+			"info": "현대인의 힐링 포션!",
+			"cost": 150,
+			"unlockCost": 1000
+		},
+		{
+			"engName": "CafeLatte",
+			"korName": "카페라떼",
+			"korStuffList": [ "커피", "우유" ],
+			"engStuffList": [ "Coffee", "Milk" ],
+			"amountList": [ "0.2", "0.8" ],
+			"drinkID": 9,
+			"info": "부드럽지만 씁쓸한 맛.",
+			"cost": 230,
+			"unlockCost": 1000
+		},
+		{
+			"engName": "VanillaLatte",
+			"korName": "바닐라라떼",
+			"korStuffList": [ "커피", "바닐라시럽", "우유" ],
+			"engStuffList": [ "Coffee", "Vanilla_S", "Milk" ],
+			"amountList": [ "0.2", "0.1", "0.7" ],
+			"drinkID": 22,
+			"info": "무려 바닐라 향이 첨가되어 있습니다.",
+			"cost": 300,
+			"unlockCost": 1000
+		},
+		{
+			"engName": "CafeMocha",
+			"korName": "카페모카",
+			"korStuffList": [ "커피", "초코시럽", "우유" ],
+			"engStuffList": [ "Coffee", "Choco_S", "Milk" ],
+			"amountList": [ "0.2", "0.1", "0.7" ],
+			"drinkID": 30,
+			"info": "초코와 커피.. 단쓴의 조합이군요.",
+			"cost": 300,
+			"unlockCost": 1000
+		},
+		{
+			"engName": "MilkLatte",
+			"korName": "연유라떼",
+			"korStuffList": [ "커피", "우유", "연유" ],
+			"engStuffList": [ "Coffee", "Milk", "Condensed_Milk_S" ],
+			"amountList": [ "0.2", "0.6", "0.2" ],
+			"drinkID": 64,
+			"info": "달달한 우유에 커피는 조금만!",
+			"cost": 350,
+			"unlockCost": 1000
+		},
+		{
+			"engName": "HoneyAmericano",
+			"korName": "꿀아메리카노",
+			"korStuffList": [ "커피", "물", "꿀" ],
+			"engStuffList": [ "Coffee", "Water", "Honey_S" ],
+			"amountList": [ "0.2", "0.6", "0.2" ],
+			"drinkID": 38,
+			"info": "말 그대로 꿀맛이네요!",
+			"cost": 280,
+			"unlockCost": 1000
+		},
+		{
+			"engName": "CaramelMacchiato",
+			"korName": "캐러멜마끼아또",
+			"korStuffList": [ "커피", "캐러멜시럽", "우유" ],
+			"engStuffList": [ "Coffee", "Caramel_S", "Milk" ],
+			"amountList": [ "0.2", "0.1", "0.7" ],
+			"drinkID": 98,
+			"info": "당이 땡기신다면 이 커피는 어떤가요?",
+			"cost": 350,
+			"unlockCost": 1000
+		},
+		{
+			"engName": "ChocoLatte",
+			"korName": "초코라떼",
+			"korStuffList": [ "초코시럽", "초코가루", "우유", "얼음" ],
+			"engStuffList": [ "Choco_S", "Choco", "Milk", "Ice" ],
+			"amountList": [ "0.2", "0.2", "0.5", "0.1" ],
+			"drinkID": 36,
+			"info": "초코에 초코를 더했습니다.",
+			"cost": 420,
+			"unlockCost": 1000
+		},
+		{
+			"engName": "GingerLatte",
+			"korName": "진저라떼",
+			"korStuffList": [ "생강", "시나몬", "우유" ],
+			"engStuffList": [ "Ginger", "Cinnamomum", "Milk" ],
+			"amountList": [ "0.1", "0.2", "0.7" ],
+			"drinkID": 6573,
+			"info": "매콤하고 달고 고소합니다.",
+			"cost": 400,
+			"unlockCost": 1000
+		},
+		{
+			"engName": "SweetPotatoLatte",
+			"korName": "고구마라떼",
+			"korStuffList": [ "고구마", "꿀", "시나몬", "우유" ],
+			"engStuffList": [ "SweetPotato", "Honey_S", "Cinnamomum", "Milk" ],
+			"amountList": [ "0.2", "0.1", "0.1", "0.6" ],
+			"drinkID": 10668,
+			"info": "사이다는 없습니다.",
+			"cost": 450,
+			"unlockCost": 1000
+		},
+		{
+			"engName": "StrawberryLatte",
+			"korName": "딸기라떼",
+			"korStuffList": [ "딸기", "우유", "얼음" ],
+			"engStuffList": [ "Strawberry", "Milk", "Ice" ],
+			"amountList": [ "0.4", "0.5", "0.1" ],
+			"drinkID": 157,
+			"info": "상큼한 딸기에 우유가 합쳐졌습니다.",
+			"cost": 400,
+			"unlockCost": 1000
+		},
+		{
+			"engName": "GreenTeaLatte",
+			"korName": "녹차라떼",
+			"korStuffList": [ "녹차가루", "우유", "얼음" ],
+			"engStuffList": [ "GreenTeaPowder", "Milk", "Ice" ],
+			"amountList": [ "0.4", "0.5", "0.1" ],
+			"drinkID": 10639,
+			"info": "녹차의 씁쓸함이 한층 부드러워진 음료입니다.",
+			"cost": 390,
+			"unlockCost": 1000
+		},
+		{
+			"engName": "IceTea",
+			"korName": "아이스티",
+			"korStuffList": [ "아이스티가루", "물", "얼음" ],
+			"engStuffList": [ "IceTeaPowder", "Water", "Ice" ],
+			"amountList": [ "0.3", "0.6", "0.1" ],
+			"drinkID": 17199,
+			"info": "언제 마셔도 여름이 생각나네요!",
+			"cost": 150,
+			"unlockCost": 1000
+		},
+		{
+			"engName": "GreenTea",
+			"korName": "녹차",
+			"korStuffList": [ "녹차가루", "물" ],
+			"engStuffList": [ "GreenTeaPowder", "Water"],
+			"amountList": [ "0.3", "0.7" ],
+			"drinkID": 10629,
+			"info": "정신이 맑아지는 향입니다",
+			"cost": 170,
+			"unlockCost": 1000
+		},
+		{
+			"engName": "OreoShake",
+			"korName": "오레오쉐이크",
+			"korStuffList": [ "오레오", "아이스크림", "우유" ],
+			"engStuffList": [ "Oreo", "IceCream", "Milk" ],
+			"amountList": [ "0.3", "0.2", "0.5" ],
+			"drinkID": 72833,
+			"info": "유명한 과자를 넣어 씹는 맛을 살렸습니다.",
+			"cost": 520,
+			"unlockCost": 1000
+		},
+		{
+			"engName": "StrawberryChocoShake",
+			"korName": "딸기초코쉐이크",
+			"korStuffList": [ "딸기", "초코시럽", "아이스크림" ],
+			"engStuffList": [ "Strawberry", "Choco_S", "IceCream" ],
+			"amountList": [ "0.3", "0.2", "0.5" ],
+			"drinkID": 45173,
+			"info": "상큼함과 달달함을 모두 잡았습니다.",
+			"cost": 550,
+			"unlockCost": 1000
+		},
+		{
+			"engName": "EarlGreyTea",
+			"korName": "얼그레이",
+			"korStuffList": [ "홍차가루", "물" ],
+			"engStuffList": [ "BlackTeaPowder", "Water" ],
+			"amountList": [ "0.3", "0.7" ],
+			"drinkID": 72828,
+			"info": "가볍고 깔끔한게, 향도 너무 좋네요!",
+			"cost": 400,
+			"unlockCost": 1000
+		},
+		{
+			"engName": "MilkTea",
+			"korName": "밀크티",
+			"korStuffList": [ "홍차가루", "물", "우유", "설탕" ],
+			"engStuffList": [ "BlackTeaPowder", "Water", "Milk", "Sugar" ],
+			"amountList": [ "0.2", "0.1", "0.6", "0.1" ],
+			"drinkID": 74393,
+			"info": "홍차의 떫은 맛을 우유로 잡았습니다.",
+			"cost": 420,
+			"unlockCost": 1000
+		},
+		{
+			"engName": "LemonAde",
+			"korName": "레몬에이드",
+			"korStuffList": [ "레몬", "탄산수", "설탕", "얼음" ],
+			"engStuffList": [ "Lemon", "SparklingWater", "Sugar", "Ice" ],
+			"amountList": [ "0.3", "0.5", "0.1", "0.1" ],
+			"drinkID": 2742,
+			"info": "기분까지 상쾌해지네요!",
+			"cost": 420,
+			"unlockCost": 1000
+		},
+		{
+			"engName": "GrapeAde",
+			"korName": "포도에이드",
+			"korStuffList": [ "포도", "탄산수", "설탕", "얼음" ],
+			"engStuffList": [ "Grape", "SparklingWater", "Sugar", "Ice" ],
+			"amountList": [ "0.3", "0.5", "0.1", "0.1" ],
+			"drinkID": 2846,
+			"info": "알코올 없는 와인입니다.",
+			"cost": 420,
+			"unlockCost": 1000
+		},
+		{
+			"engName": "OrangeAde",
+			"korName": "오렌지에이드",
+			"korStuffList": [ "오렌지", "탄산수", "설탕", "얼음" ],
+			"engStuffList": [ "Orange", "SparklingWater", "Sugar", "Ice" ],
+			"amountList": [ "0.3", "0.5", "0.1", "0.1" ],
+			"drinkID": 3119,
+			"info": "오렌지가 통째로 들어갔습니다!",
+			"cost": 420,
+			"unlockCost": 1000
 		}
 	]
 }

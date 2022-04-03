@@ -1,11 +1,11 @@
 ﻿{
-	"stuffs" : [
+	"stuffs": [
 		{
 			"engName": "Coffee",
 			"korName": "커피",
 			"cost": 0,
 			"stuffID": 1,
-			"color": ["0.2","0.07","0"],
+			"color": [ "0.2", "0.07", "0" ],
 			"isLocked": false
 		},
 		{
@@ -13,24 +13,184 @@
 			"korName": "초코가루",
 			"cost": 1500,
 			"stuffID": 2,
-			"color": ["0.43","0.33","0.29"],
-			"isLocked": false
+			"color": [ "0.43", "0.33", "0.29" ],
+			"isLocked": true
 		},
 		{
 			"engName": "Water",
 			"korName": "물",
 			"cost": 0,
-			"stuffID": 4,
-			"color": ["0.3","0.87","0.88"],
+			"stuffID": 3,
+			"color": [ "0.3", "0.87", "0.88" ],
 			"isLocked": false
+		},
+		{
+			"engName": "Ice",
+			"korName": "얼음",
+			"cost": 300,
+			"stuffID": 5,
+			"color": [ "0.6", "0.85", "0.85" ],
+			"isLocked": true
 		},
 		{
 			"engName": "Milk",
 			"korName": "우유",
 			"cost": 700,
 			"stuffID": 8,
-			"color": ["0.9","0.9","0.9"],
-			"isLocked": false
+			"color": [ "0.9", "0.9", "0.9" ],
+			"isLocked": true
+		},
+		{
+			"engName": "Vanilla_S",
+			"korName": "바닐라시럽",
+			"cost": 1000,
+			"stuffID": 13,
+			"color": [ "0.94", "0.91", "0.67" ],
+			"isLocked": true
+		},
+		{
+			"engName": "Choco_S",
+			"korName": "초코시럽",
+			"cost": 1000,
+			"stuffID": 21,
+			"color": [ "0.37", "0.24", "0.2" ],
+			"isLocked": true
+		},
+		{
+			"engName": "Honey_S",
+			"korName": "꿀",
+			"cost": 800,
+			"stuffID": 34,
+			"color": [ "0.87", "0.49", "0.05" ],
+			"isLocked": true
+		},
+		{
+			"engName": "Condensed_Milk_S",
+			"korName": "연유",
+			"cost": 1000,
+			"stuffID": 55,
+			"color": [ "0.85", "0.8", "0.65" ],
+			"isLocked": true
+		},
+		{
+			"engName": "Caramel_S",
+			"korName": "캐러멜시럽",
+			"cost": 1000,
+			"stuffID": 89,
+			"color": [ "0.54", "0.14", "0.06" ],
+			"isLocked": true
+		},
+		{
+			"engName": "Strawberry",
+			"korName": "딸기",
+			"cost": 1800,
+			"stuffID": 144,
+			"color": [ "0.86", "0.13", "0.11" ],
+			"isLocked": true
+		},
+		{
+			"engName": "Lemon",
+			"korName": "레몬",
+			"cost": 1800,
+			"stuffID": 233,
+			"color": [ "0.96", "0.8", "0.04" ],
+			"isLocked": true
+		},
+		{
+			"engName": "Grape",
+			"korName": "포도",
+			"cost": 1800,
+			"stuffID": 337,
+			"color": [ "0.43", "0.3", "0.6" ],
+			"isLocked": true
+		},
+		{
+			"engName": "Orange",
+			"korName": "오렌지",
+			"cost": 1800,
+			"stuffID": 610,
+			"color": [ "0.92", "0.56", "0" ],
+			"isLocked": true
+		},
+		{
+			"engName": "SparklingWater",
+			"korName": "탄산수",
+			"cost": 1200,
+			"stuffID": 947,
+			"color": [ "0.17", "0.84", "0.96" ],
+			"isLocked": true
+		},
+		{
+			"engName": "Sugar",
+			"korName": "설탕",
+			"cost": 800,
+			"stuffID": 1557,
+			"color": [ "0.99", "0.99", "0.99" ],
+			"isLocked": true
+		},
+		{
+			"engName": "Ginger",
+			"korName": "생강",
+			"cost": 1200,
+			"stuffID": 2504,
+			"color": [ "0.89", "0.76", "0.51" ],
+			"isLocked": true
+		},
+		{
+			"engName": "Cinnamomum",
+			"korName": "시나몬",
+			"cost": 1200,
+			"stuffID": 4061,
+			"color": [ "0.49", "0.27", "0.17" ],
+			"isLocked": true
+		},
+		{
+			"engName": "SweetPotato",
+			"korName": "고구마",
+			"cost": 1200,
+			"stuffID": 6565,
+			"color": [ "0.44", "0.03", "0.43" ],
+			"isLocked": true
+		},
+		{
+			"engName": "GreenTeaPowder",
+			"korName": "녹차가루",
+			"cost": 1200,
+			"stuffID": 10626,
+			"color": [ "0.18", "0.67", "0" ],
+			"isLocked": true
+		},
+		{
+			"engName": "IceTeaPowder",
+			"korName": "아이스티가루",
+			"cost": 1200,
+			"stuffID": 17191,
+			"color": [ "0.88", "0.43", "0.1" ],
+			"isLocked": true
+		},
+		{
+			"engName": "Oreo",
+			"korName": "오레오",
+			"cost": 1200,
+			"stuffID": 27817,
+			"color": [ "0.31", "0.31", "0.3" ],
+			"isLocked": true
+		},
+		{
+			"engName": "IceCream",
+			"korName": "아이스크림",
+			"cost": 1200,
+			"stuffID": 45008,
+			"color": [ "0.59", "0.86", "0.31" ],
+			"isLocked": true
+		},
+		{
+			"engName": "BlackTeaPowder",
+			"korName": "홍차가루",
+			"cost": 1200,
+			"stuffID": 72825,
+			"color": [ "0.70", "0.29", "0.05" ],
+			"isLocked": true
 		}
 	]
 }

@@ -4,9 +4,11 @@ using UnityEngine.EventSystems;
 
 public class UI_Option : UI_Popup
 {
+    public SceneFader sceneFader { get; set; }
     enum Buttons
     {
         CloseButton,
+        ExitButton,
     }
 
     enum Toggles
@@ -32,6 +34,7 @@ public class UI_Option : UI_Popup
 
         // 창닫기
         BindEvent(GetButton((int)Buttons.CloseButton).gameObject, (PointerEventData data) => { Managers.UI.ClosePopupUI(); Time.timeScale = 1f; });
+        BindEvent(GetButton((int)Buttons.ExitButton).gameObject, (PointerEventData data) => { ExitGame(); });
 
         // Toggle 이벤트
         BindEvent(Get<Toggle>((int)Toggles.BGMOnToggle).gameObject, (PointerEventData data) => { ControlToggle(Toggles.BGMOnToggle); });
@@ -92,5 +95,12 @@ public class UI_Option : UI_Popup
                 Managers.Sound.EffectSoundCtrl(false);
                 break;
         }
+    }
+
+    void ExitGame()
+    {
+        Managers.Data.SaveJson<Data.PlayerStat>(Managers.Data.Playerdata);
+        Time.timeScale = 1f;
+        sceneFader.FadeTo("Start");
     }
 }

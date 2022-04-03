@@ -24,6 +24,7 @@ public class Define
     {
         Perfect,
         Good,
-        NotBad
+        NotBad,
+        Wrong,
     }
 }
