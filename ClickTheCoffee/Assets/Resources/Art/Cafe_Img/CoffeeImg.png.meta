@@ -1,0 +1,1056 @@
+fileFormatVersion: 2
+guid: 0ab3f7602c6d4f4449c82e032c2c8033
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1481106900906654350
+    second: CoffeeImg_0
+  - first:
+      213: -7873834956336901326
+    second: CoffeeImg_1
+  - first:
+      213: 1292197265616651875
+    second: CoffeeImg_2
+  - first:
+      213: -6276225185068590953
+    second: CoffeeImg_3
+  - first:
+      213: -9158263431743650736
+    second: CoffeeImg_4
+  - first:
+      213: 9005767849206489333
+    second: CoffeeImg_5
+  - first:
+      213: -3254523047167303835
+    second: CoffeeImg_6
+  - first:
+      213: -5947109185572782434
+    second: CoffeeImg_7
+  - first:
+      213: -2957296518861112961
+    second: CoffeeImg_8
+  - first:
+      213: 7390251679247835198
+    second: CoffeeImg_9
+  - first:
+      213: -4061674704636541970
+    second: CoffeeImg_10
+  - first:
+      213: 953330987251481399
+    second: CoffeeImg_11
+  - first:
+      213: 2085613099424383457
+    second: CoffeeImg_12
+  - first:
+      213: 5587938952668024945
+    second: CoffeeImg_13
+  - first:
+      213: -2609041527326029680
+    second: CoffeeImg_14
+  - first:
+      213: 1139549148379694737
+    second: CoffeeImg_15
+  - first:
+      213: -6484936129162001361
+    second: CoffeeImg_16
+  - first:
+      213: -1996452818281356078
+    second: CoffeeImg_17
+  - first:
+      213: 6436114761699395806
+    second: CoffeeImg_18
+  - first:
+      213: 8222568683696598508
+    second: CoffeeImg_19
+  - first:
+      213: 2252243835646207426
+    second: CoffeeImg_20
+  - first:
+      213: 652539577801967474
+    second: CoffeeImg_21
+  - first:
+      213: 2263233673747989200
+    second: CoffeeImg_22
+  - first:
+      213: 4356210013290498096
+    second: CoffeeImg_23
+  - first:
+      213: 3299067352625363715
+    second: CoffeeImg_24
+  - first:
+      213: -7393935441912103210
+    second: CoffeeImg_25
+  - first:
+      213: -6266853261562995227
+    second: CoffeeImg_26
+  - first:
+      213: 2107947618296680248
+    second: CoffeeImg_27
+  - first:
+      213: -1441021043680607191
+    second: CoffeeImg_28
+  - first:
+      213: -7473636585532700892
+    second: CoffeeImg_29
+  - first:
+      213: -6884215077710046557
+    second: CoffeeImg_30
+  - first:
+      213: 2737358100085625359
+    second: CoffeeImg_31
+  - first:
+      213: 6394761253200063562
+    second: CoffeeImg_32
+  - first:
+      213: 8086716969618240403
+    second: CoffeeImg_33
+  - first:
+      213: 2213672102789594449
+    second: CoffeeImg_34
+  - first:
+      213: 3060883592012022033
+    second: CoffeeImg_35
+  - first:
+      213: 62005237638049531
+    second: CoffeeImg_36
+  - first:
+      213: -1343278731694821734
+    second: CoffeeImg_37
+  - first:
+      213: -2461647461058560092
+    second: CoffeeImg_38
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 30
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CoffeeImg_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 351
+        width: 56
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8abbee01e2fd8410800000000000000
+      internalID: 1481106900906654350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 350
+        width: 56
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2335c7713d48ab290800000000000000
+      internalID: -7873834956336901326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_2
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 352
+        width: 57
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 366cfc4119ecee110800000000000000
+      internalID: 1292197265616651875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_3
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 351
+        width: 59
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79850a1727e56e8a0800000000000000
+      internalID: -6276225185068590953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_4
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 350
+        width: 59
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 054487f6eef47e080800000000000000
+      internalID: -9158263431743650736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_5
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 350
+        width: 58
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f0269de42aeafc70800000000000000
+      internalID: 9005767849206489333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_6
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 350
+        width: 63
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56f5544288c95d2d0800000000000000
+      internalID: -3254523047167303835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_7
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 395
+        width: 73
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9eb87174bf977da0800000000000000
+      internalID: -5947109185572782434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_8
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 344
+        width: 69
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f79b8c90c7295f6d0800000000000000
+      internalID: -2957296518861112961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_9
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 215
+        width: 57
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e302d4e3fb27f8660800000000000000
+      internalID: 7390251679247835198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_10
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 214
+        width: 51
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee303f4306802a7c0800000000000000
+      internalID: -4061674704636541970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_11
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 213
+        width: 50
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73b3f706b79ea3d00800000000000000
+      internalID: 953330987251481399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_12
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 214
+        width: 53
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e1871a501691fc10800000000000000
+      internalID: 2085613099424383457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_13
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 215
+        width: 55
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 170985c0fd85c8d40800000000000000
+      internalID: 5587938952668024945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_14
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 216
+        width: 105
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0984d7fdd82dacbd0800000000000000
+      internalID: -2609041527326029680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_15
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 220
+        width: 102
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1964541b9ed70df00800000000000000
+      internalID: 1139549148379694737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_16
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 141
+        width: 68
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f24c33ef2f0e006a0800000000000000
+      internalID: -6484936129162001361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_17
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 141
+        width: 69
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d4238b4dbc2b44e0800000000000000
+      internalID: -1996452818281356078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_18
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 130
+        width: 55
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed88db8964ca15950800000000000000
+      internalID: 6436114761699395806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_19
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 130
+        width: 54
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cedacfc17ae6c1270800000000000000
+      internalID: 8222568683696598508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_20
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 130
+        width: 52
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c5614be5d3914f10800000000000000
+      internalID: 2252243835646207426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_21
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 170
+        width: 30
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27705c8e9494e0900800000000000000
+      internalID: 652539577801967474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_22
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 169
+        width: 39
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d2837ff80f986f10800000000000000
+      internalID: 2263233673747989200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_23
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 167
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0380e294ded547c30800000000000000
+      internalID: 4356210013290498096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_24
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 171
+        width: 40
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30bb25b2744a8cd20800000000000000
+      internalID: 3299067352625363715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_25
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 101
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6de78ace3e6736990800000000000000
+      internalID: -7393935441912103210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_26
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 101
+        width: 7
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ed1a0d692aa709a0800000000000000
+      internalID: -6266853261562995227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_27
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 31
+        width: 54
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83f44b1c03fe04d10800000000000000
+      internalID: 2107947618296680248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_28
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 28
+        width: 57
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9240e81eef6700ce0800000000000000
+      internalID: -1441021043680607191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_29
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 55
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 427c5fa5f1f484890800000000000000
+      internalID: -7473636585532700892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_30
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 57
+        width: 47
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aa54b76cda5670a0800000000000000
+      internalID: -6884215077710046557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_31
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 57
+        width: 47
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0254aa50bc0df520800000000000000
+      internalID: 2737358100085625359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_32
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 63
+        width: 86
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4ceb689a71ceb850800000000000000
+      internalID: 6394761253200063562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_33
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 62
+        width: 87
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 393f7351d3ac93070800000000000000
+      internalID: 8086716969618240403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_34
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 35
+        width: 50
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15d37f78c0b88be10800000000000000
+      internalID: 2213672102789594449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_35
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 21
+        width: 93
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 111c2b0e8617a7a20800000000000000
+      internalID: 3060883592012022033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_36
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 7
+        width: 20
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfe21a36f694cd000800000000000000
+      internalID: 62005237638049531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_37
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 10
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9e2efa4c17bb5de0800000000000000
+      internalID: -1343278731694821734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoffeeImg_38
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 8
+        width: 59
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4afbc513da876ddd0800000000000000
+      internalID: -2461647461058560092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

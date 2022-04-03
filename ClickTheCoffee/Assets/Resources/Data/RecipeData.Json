@@ -1,0 +1,22 @@
+﻿{
+	"recipes": [
+		{
+			"engName": "Espresso",
+			"korName": "에스프레소",
+			"stuffList": [ "커피" ],
+			"amountList": [ "1" ],
+			"drinkID": 1,
+			"info": "도전하고 싶은 자의 음료.",
+			"cost": 300
+		},
+		{
+			"engName": "Americano",
+			"korName": "아메리카노",
+			"stuffList": [ "커피","물" ],
+			"amountList": [ "0.3","0.7" ],
+			"drinkID": 5,
+			"info": "현대인의 필수 물약!",
+			"cost": 350
+		}
+	]
+}

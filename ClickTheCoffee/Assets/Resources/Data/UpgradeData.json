@@ -1,0 +1,53 @@
+﻿{
+  "upgrades": [
+    {
+      "engUpgradeName": "IncreasePop",
+      "korUpgradeName": "인기도 증가",
+      "info": "더 많은 손님!",
+      "cost": "2000",
+      "totalLevel": "10"
+    },
+    {
+      "engUpgradeName": "NewCoffee",
+      "korUpgradeName": "신메뉴: 커피",
+      "info": "커피 레시피 Get!",
+      "cost": "1000",
+      "totalLevel": "5"
+    },
+    {
+      "engUpgradeName": "NewTea",
+      "korUpgradeName": "신메뉴: 차",
+      "info": "차 레시피 Get!",
+      "cost": "1000",
+      "totalLevel": "5"
+    },
+    {
+      "engUpgradeName": "NewJuice",
+      "korUpgradeName": "신메뉴: 쥬스",
+      "info": "쥬스 레시피 Get!",
+      "cost": "1000",
+      "totalLevel": "5"
+    },
+    {
+      "engUpgradeName": "SpeedCoffee",
+      "korUpgradeName": "빠른제조: 커피",
+      "info": "커피를 더 빠르게!",
+      "cost": "1000",
+      "totalLevel": "10"
+    },
+    {
+      "engUpgradeName": "SpeedTea",
+      "korUpgradeName": "빠른제조: 차",
+      "info": "차를 더 빠르게!",
+      "cost": "1000",
+      "totalLevel": "10"
+    },
+    {
+      "engUpgradeName": "SpeedJuice",
+      "korUpgradeName": "빠른제조: 쥬스",
+      "info": "쥬스를 더 빠르게!",
+      "cost": "1000",
+      "totalLevel": "10"
+    }
+  ]
+}
